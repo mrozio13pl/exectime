@@ -1,0 +1,51 @@
+{
+  "name": "@mrozio/exectime",
+  "version": "0.0.0",
+  "description": "Measure the execution time of a function.",
+  "sideEffects": false,
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "repository": "mrozio13pl/exectime",
+  "author": "mrozio13pl",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "test": "tsd && karma start karma.config.cjs",
+    "release": "npm t && npm run build && release-it"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@mrozio/eslint-config": "^1.0.3",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@types/node": "^20.10.4",
+    "esbuild": "^0.19.9",
+    "eslint": "^8.55.0",
+    "karma": "^6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage": "^2.2.1",
+    "karma-firefox-launcher": "^2.1.2",
+    "karma-qunit": "^4.1.2",
+    "karma-webpack": "^5.0.0",
+    "publint": "^0.2.6",
+    "qunit": "^2.20.0",
+    "release-it": "^17.0.1",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.9.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0",
+    "tsd": "^0.29.0",
+    "typescript": "^5.3.3"
+  },
+  "tsd": {
+    "directory": "src"
+  }
+}
