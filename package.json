@@ -1,6 +1,6 @@
 {
   "name": "@mrozio/exectime",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Measure the execution time of a function.",
   "sideEffects": false,
   "main": "dist/index.cjs",
